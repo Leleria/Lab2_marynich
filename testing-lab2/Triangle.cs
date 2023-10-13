@@ -122,9 +122,10 @@ namespace testing_lab2
             var yB = 0;
 
             // C (угол между a и b)
-            double cosA = Math.Acos((b * b + c * c - a * a) / (2 * b * c));
-            var xC = (int)(b * Math.Cos(cosA));
-            var yC = (int)(b * Math.Sin(cosA));
+
+            double cosA =Math.Acos((b * b + c * c - a * a) / (2 * b * c));
+            int xC = (int)(b * Math.Cos(cosA));
+            int yC = (int)(b * Math.Sin(cosA));
 
             //
 
@@ -135,12 +136,26 @@ namespace testing_lab2
             {
                 float scale = Math.Min(100 / maxX , 100 / maxY);
 
-                xA = (int)(xA * scale);
-                yA = (int)(yA * scale);
-                xB = (int)(xB * scale);
-                yB = (int)(yB * scale);
-                xC = (int)(yC * scale);
-                yC = (int)(yC * scale);
+                float XA = xA;
+                float XB = xB;
+                float YA = yA;
+                float YB = yB;
+                float XC = xC;
+                float YC = yC;
+
+                XA *= scale;
+                YA *= scale;
+                XB *= scale;
+                YB *= scale;
+                XC *= scale;
+                YC *= scale;
+
+                xA = (int)XA;
+                yA = (int)YA;
+                xB = (int)XB;
+                yB = (int)YB;
+                xC = (int)XC;
+                yC = (int)YC;
 
             }
 

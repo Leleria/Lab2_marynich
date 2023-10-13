@@ -182,7 +182,7 @@ namespace Testing
         {
 
             List<(int, int)> tuple = new List<(int, int)>();
-            tuple = new List<(int, int)> { (0, 0), (90, 0), (91, 91) };
+            tuple = new List<(int, int)> { (0, 0), (90, 0), (100, 91) };
             var expect = ("разносторонний", tuple);
 
             var actual = Triangle.GetTriangleInfo("400", "588", "390");
@@ -199,7 +199,7 @@ namespace Testing
         {
 
             List<(int, int)> tuple = new List<(int, int)>();
-            tuple = new List<(int, int)> { (0, 0), (100, 0), (95, 95) };
+            tuple = new List<(int, int)> { (0, 0), (100, 0), (33, 95) };
             var expect = ("разносторонний", tuple);
 
             var actual = Triangle.GetTriangleInfo(a, b, c);
@@ -212,7 +212,7 @@ namespace Testing
         {
 
             List<(int, int)> tuple = new List<(int, int)>();
-            tuple = new List<(int, int)> { (0, 0), (100, 0), (86, 86) };
+            tuple = new List<(int, int)> { (0, 0), (100, 0), (49, 86) };
             var expect = ("равносторонний", tuple);
 
             var actual = Triangle.GetTriangleInfo("400", "400", "400");
@@ -225,13 +225,14 @@ namespace Testing
         {
 
             List<(int, int)> tuple = new List<(int, int)>();
-            tuple = new List<(int, int)> { (0, 0), (100, 0), (83, 83) };
+            tuple = new List<(int, int)> { (0, 0), (100, 0), (50, 83) };
             var expect = ("равнобедренный", tuple);
 
             var actual = Triangle.GetTriangleInfo("390", "390", "400");
 
             Assert.AreEqual(expect, actual);
         }
+
 
         [TestCase("350,6", "350,6", "234,56")]
         [TestCase("350,6", "350.6", "234,56")]
@@ -242,7 +243,7 @@ namespace Testing
         {
 
             List<(int, int)> tuple = new List<(int, int)>();
-            tuple = new List<(int, int)> { (0, 0), (70, 0), (100, 100) };
+            tuple = new List<(int, int)> { (0, 0), (70, 0), (35, 100) };
             var expect = ("равнобедренный", tuple);
 
             var actual = Triangle.GetTriangleInfo(a, b, c);
@@ -255,7 +256,7 @@ namespace Testing
         {
 
             List<(int, int)> tuple = new List<(int, int)>();
-            tuple = new List<(int, int)> { (0, 0), (100, 0), (87, 87) };
+            tuple = new List<(int, int)> { (0, 0), (100, 0), (52, 87) };
             var expect = ("равнобедренный", tuple);
 
             var actual = Triangle.GetTriangleInfo("390", "400", "390");
@@ -272,7 +273,7 @@ namespace Testing
         {
 
             List<(int, int)> tuple = new List<(int, int)>();
-            tuple = new List<(int, int)> { (0, 0), (100, 0), (63, 63) };
+            tuple = new List<(int, int)> { (0, 0), (100, 0), (22, 63) };
             var expect = ("равнобедренный", tuple);
 
             var actual = Triangle.GetTriangleInfo(a, b, c);
@@ -285,7 +286,7 @@ namespace Testing
         {
 
             List<(int, int)> tuple = new List<(int, int)>();
-            tuple = new List<(int, int)> { (0, 0), (100, 0), (87, 87) };
+            tuple = new List<(int, int)> { (0, 0), (100, 0), (47, 87) };
             var expect = ("равнобедренный", tuple);
 
             var actual = Triangle.GetTriangleInfo("400", "390", "390");
@@ -302,7 +303,7 @@ namespace Testing
         {
 
             List<(int, int)> tuple = new List<(int, int)>();
-            tuple = new List<(int, int)> { (0, 0), (100, 0), (63, 63) };
+            tuple = new List<(int, int)> { (0, 0), (100, 0), (77, 63) };
             var expect = ("равнобедренный", tuple);
 
             var actual = Triangle.GetTriangleInfo(a, b, c);
